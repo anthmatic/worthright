@@ -1,6 +1,6 @@
 import { Button } from "./global";
 import { useState, useContext } from "react";
-import { AppContext } from "../AppContext";
+import { AppContext } from "../screens/AppContext";
 
 const PolicyAmountStep = () => {
     const [amount, setAmount] = useState("");

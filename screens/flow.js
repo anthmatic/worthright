@@ -1,10 +1,10 @@
 import {useContext} from 'react';
 import {AppContext} from './AppContext';
-import AgeStep from './partials/AgeStep';
-import FirstNameStep from './partials/FirstNameStep';
-import GenderStep from './partials/GenderStep';
-import { Header, Footer, Container } from "./partials/global";
-import PolicyAmountStep from './partials/PolicyAmountStep';
+import AgeStep from '../partials/AgeStep';
+import FirstNameStep from '../partials/FirstNameStep';
+import GenderStep from '../partials/GenderStep';
+import { Header, Footer, Container } from "../partials/global";
+import PolicyAmountStep from '../partials/PolicyAmountStep';
 
 
 

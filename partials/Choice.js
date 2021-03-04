@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Button } from "./global";
-import { AppContext } from "../AppContext";
+import { AppContext } from "../screens/AppContext";
 const Choice = () => {
   const [goal, setGoal] = useState("");
   const [state, setState] = useContext(AppContext);

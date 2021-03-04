@@ -1,23 +1,24 @@
 import { Button } from "./global";
 import { useState, useContext } from "react";
-import { AppContext } from "../AppContext";
+import { AppContext } from "../screens/AppContext";
 
-const FirstNameStep = () => {
-  const [name, setName] = useState("");
+const AgeStep = () => {
+  const [age, setAge] = useState("");
   const [state, setState] = useContext(AppContext);
 
   const handleContinue = () => {
-    setState({ ...state, name, currentStep: 2 });
+    setState({ ...state, age, currentStep: 4 });
   };
 
   return (
     <>
-      <label className="block">What is your first name?</label>
+      <label className="block">What is your age?</label>
       <input
         type="text"
-        value={name}
+        value={age}
+        placeholder="Enter your age"
         onChange={(e) => {
-          setName(e.target.value);
+          setAge(e.target.value);
         }}
         className="border-1 border border-black py-3 px-4 bg-wwhite"
       />
@@ -26,4 +27,4 @@ const FirstNameStep = () => {
   );
 };
 
-export default FirstNameStep;
+export default AgeStep;
