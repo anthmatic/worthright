@@ -12,6 +12,14 @@ const GenderStep = () => {
 
   return (
     <>
+      <h1 className="text-5xl font-serif font-bold mt-4 mb-6">
+        Hi {state.name ? state.name : "there"}!
+      </h1>
+      <p className="text-xl">
+        Taking the guesswork out of how to maintain a full life as we age means
+        knowing what the options are. Let’s find out how much value your life
+        policy holds today.
+      </p>
       <div className="block">What is your gender?</div>
       <label className="border-1 border border-black py-3 px-4 bg-wwhite block">
         <input

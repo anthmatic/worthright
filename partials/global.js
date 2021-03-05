@@ -2,16 +2,9 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="flex justify-between w-full">
-      <Image src="/worthright.svg" width={86} height={21} />
-      <ul className="ml-10 items-baseline space-x-4 hidden md:flex">
-        <li>FOR FAMILIES</li>
-        <li>PROFESSIONALS</li>
-        <li>SOLUTIONS</li>
-        <li>ABOUT</li>
-        <li>RESOURCES</li>
-      </ul>
-      <a href="">Contact</a>
+    <div className="md:flex justify-between items-center w-full">
+      <Image src="/logo_full.svg" width={100} height={25} />
+      <p className="text-sm">TALK TO AN ADVISOR - CALL (555) 555-5555</p>
     </div>
   );
 };

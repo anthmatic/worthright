@@ -12,6 +12,15 @@ const AgeStep = () => {
 
   return (
     <>
+      <h1 className="text-5xl font-serif font-bold mt-4 mb-6">
+        That was easy!
+      </h1>
+      <p className="text-xl">
+        Let’s keep going. Your age is one of the most important factors in
+        determining your policy value. As long as you are older than 65, you’ve
+        not only acquired a world of wisdom, but you’ll also be able to see if
+        you qualify for a settlement!
+      </p>
       <label className="block">What is your age?</label>
       <input
         type="text"

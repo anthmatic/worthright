@@ -3,13 +3,13 @@ import styles from "../styles/Home.module.css";
 import "tailwindcss/tailwind.css";
 
 import App from "../screens/App";
+import ConfirmationScreen from "../screens/ConfirmationScreen";
 
 
-export default function Home() {
+export default function Confirmation() {
   return (
-
       <div className="">
-        <App />
-      </div>
+        <ConfirmationScreen />
+        </div>
   );
 }
