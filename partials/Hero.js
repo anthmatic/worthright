@@ -3,7 +3,7 @@ import Choice from "./Choice";
 
 const Hero = () => {
   return (
-    <div className="relative">
+    <div className="relative" id="top">
         <img
           src="/image_block/sally.png"
           className="md:absolute right-1/2 top-0 max-h-full pb-10 mr-20"

@@ -18,7 +18,7 @@ const Choice = () => {
         }}
       >
         <option disabled="true" value="placeholder">
-          I would pay for...
+          I would...
         </option>
         <option value="Pay for medical expenses">
           Pay for medical expenses

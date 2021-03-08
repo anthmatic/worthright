@@ -11,7 +11,8 @@ module.exports = {
       wfooter: '#08ADB3',
       wlightgreen: '#08ADB310',
       wblack: '#242833',
-      wwhite: '#ffffff'
+      wwhite: '#ffffff',
+      red: '#bb3f3f'
     },
     fontFamily: {
       'sans': ['Lato', 'sans-serif'],

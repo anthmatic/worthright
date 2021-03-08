@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "./global";
+import { Button, scrollUp } from "./global";
 
 const Person = ({ image, heading, text, height, width }) => {
   return (
@@ -46,8 +46,8 @@ const HowSection = () => {
         />
       </div>
       <div className="text-center mt-10">
-      <Button text="GET MY ESTIMATE" id="estimate" color="wgold" align="center" />
-      <a href="tel:555-5555" className="underline inline-block mt-4">Or, call us at (555) 555-5555</a>
+      <Button text="GET MY ESTIMATE" id="estimate" color="wgold" align="center" handler={scrollUp} />
+      <a href="tel:555-5555" className="underline inline-block mt-4">Or, call us at (877) 777-2918</a>
       </div>
     </div>
     </div>

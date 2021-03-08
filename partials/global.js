@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="md:flex justify-between items-center w-full text-center md:text-left">
       <Image src="/logo_full.svg" width={100} height={25} />
-      <p className="text-sm">TALK TO AN ADVISOR - CALL (555) 555-5555</p>
+      <p className="text-sm">TALK TO AN ADVISOR - CALL (877) 777-2918</p>
     </div>
   );
 };
@@ -38,4 +38,8 @@ const Button = ({id, text, handler, color, align, disabled}) => {
   )
 }
 
-export { Header, Footer, Container, Button };
+const scrollUp = () => {
+  window.scrollTo(0, 0);
+};
+
+export { Header, Footer, Container, Button, scrollUp };

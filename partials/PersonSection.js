@@ -7,7 +7,7 @@ const Person = ({ image, heading, text }) => {
   return (
     <div className="p-2">
       <Image src={image} height={175} width={175} />
-      <p className="mt-10" dangerouslySetInnerHTML={createMarkup()}></p>
+      <p className="mt-10 text-lg" dangerouslySetInnerHTML={createMarkup()}></p>
     </div>
   );
 };
@@ -23,7 +23,7 @@ const PersonSection = ({ title }) => {
     };
   };
   return (
-    <div className="container py-20">
+    <div className="container py-20 px-5">
       <h2 className="text-5xl font-serif font-bold text-center mb-20" dangerouslySetInnerHTML={htmlTitle()}></h2>
       <div className="grid md:grid-cols-3 gap-24 text-center md:text-left">
         <Person

@@ -9,10 +9,10 @@ const ConfirmationNoEstimate = () => {
           Good news!
         </h2>
         <p className="text-xl">
-          You may qualify for a settlement, but we need more information.
+          You may qualify for a settlement!
         </p>
         <p className="text-xl mt-8">
-          <strong>Call us at (555) 555-5555.</strong> We can help you better understand your
+          <strong>Call us at (877) 777-2918.</strong> We can help you better understand your
           options, so you can make the right choice for you.{" "}
         </p>
       </div>

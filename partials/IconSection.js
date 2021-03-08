@@ -13,7 +13,7 @@ const Blurb = ({ image, heading, text }) => {
 const IconSection = () => {
   return (
 
-    <div className="container py-20">
+    <div className="container py-20 px-5">
         <h2 className="text-5xl font-serif font-bold text-center mb-20"><span className="text-wgold ">What can I do</span> if I sell my policy?</h2>
       <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
         <Blurb

@@ -7,10 +7,23 @@ import Image from "next/image";
 const AgeStep = () => {
   const [state, setState] = useContext(AppContext);
   const [age, setAge] = useState(state.age || "");
+  const [error, setError] = useState(false);
+  const [disabled, setDisabled] = useState(true);
 
   const handleContinue = () => {
     setState({ ...state, age, currentStep: 4 });
   };
+
+const validateAge = (newAge) => {
+  setAge(newAge);
+  if (isNaN(newAge) || newAge < 64) {
+    setError(true)
+    setDisabled(true)
+  } else {
+    setError(false);
+    setDisabled(false);
+  }
+}
 
   return (
     <>
@@ -32,11 +45,12 @@ const AgeStep = () => {
               value={age}
               placeholder="Enter your age"
               onChange={(e) => {
-                setAge(e.target.value);
+                validateAge(e.target.value)
               }}
               className="border-1 border border-black py-3 px-4 bg-wwhite w-3/4"
             />
-            <Button color="wgold mt-3" text="CONTINUE" handler={handleContinue} disabled={!age} />
+            {error && <span className="block text-sm text-red pt-1">Please enter an age greater than 64</span>}
+            <Button color="wgold mt-3" text="CONTINUE" handler={handleContinue} disabled={disabled} />
           </div>
           <div className="flex-1 text-center md:text-right pt-5">
             <Image src="/step_3.png" width="296" height="352" />

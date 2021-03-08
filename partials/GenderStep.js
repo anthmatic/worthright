@@ -81,7 +81,7 @@ const GenderStep = () => {
       </Container>
       <Logos />
       <Container>
-                <div className="pt-20 pb-32 text-center max-w-4xl mx-auto">
+                <div className="pt-20 pb-32 text-center max-w-4xl mx-auto px-5">
                   <h2 className="text-5xl font-serif font-bold mb-10">Did you know?</h2>
                   <p className="text-xl leading-normal mb-10">It’s even possible to keep some a portion of your policy’s benefit intact, just in case you want to leave it for your beneficiaries. </p>
                   <Image src="/flags.png" width="419" height="134" />

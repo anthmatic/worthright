@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutOverlap = () => {
   return (
-    <div className="container pb-20 -mt-12 text-center max-w-3xl">
+    <div className="container pb-20 -mt-12 text-center max-w-3xl px-5">
     <Image src="/icons/logo_icon.png" height={84} width={65} />
       <h2 className="text-5xl font-serif font-bold text-center mt-10 mb-6">
        About Worthright

@@ -1,6 +1,7 @@
-import { Button, Container } from "./global";
+import { Button, Container, scrollUp } from "./global";
 
 const ImageBlock = () => {
+
   return (
     <>
       <div className="bg-wyellow relative overflow-x-hidden">
@@ -27,7 +28,7 @@ const ImageBlock = () => {
               $638,700 by selling his policy, which was $375,000 more than he
               would have received surrendering it.
             </p>
-            <Button text="GET YOUR ESTIMATE" id="estimate" />
+            <Button text="GET YOUR ESTIMATE" id="estimate" handler={scrollUp}  />
           </div>
         </Container>
       </div>
@@ -57,7 +58,7 @@ const ImageBlock = () => {
               used it to reinvest in her family’s business, freeing up
               much-needed capital that her sons were able to use today.
             </p>
-            <Button text="GET YOUR ESTIMATE" id="estimate" />
+            <Button text="GET YOUR ESTIMATE" id="estimate" handler={scrollUp} />
           </div>
         </Container>
       </div>
