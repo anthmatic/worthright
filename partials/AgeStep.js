@@ -1,10 +1,12 @@
-import { Button } from "./global";
+import { Button, Container } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
+import Logos from "../partials/Logos"
+import Image from "next/image";
 
 const AgeStep = () => {
-  const [age, setAge] = useState("");
   const [state, setState] = useContext(AppContext);
+  const [age, setAge] = useState(state.age || "");
 
   const handleContinue = () => {
     setState({ ...state, age, currentStep: 4 });
@@ -12,26 +14,35 @@ const AgeStep = () => {
 
   return (
     <>
-      <h1 className="text-5xl font-serif font-bold mt-4 mb-6">
-        That was easy!
-      </h1>
-      <p className="text-xl">
-        Let’s keep going. Your age is one of the most important factors in
-        determining your policy value. As long as you are older than 65, you’ve
-        not only acquired a world of wisdom, but you’ll also be able to see if
-        you qualify for a settlement!
-      </p>
-      <label className="block">What is your age?</label>
-      <input
-        type="text"
-        value={age}
-        placeholder="Enter your age"
-        onChange={(e) => {
-          setAge(e.target.value);
-        }}
-        className="border-1 border border-black py-3 px-4 bg-wwhite"
-      />
-      <Button color="wgold" text="Contine" handler={handleContinue} />
+      <Container cName="bg-wgray px-5 pb-5">
+        <div className="md:flex pb-20">
+          <div className="flex-1">
+            <h1 className="text-5xl font-serif font-bold pt-4 mb-6">
+              That was easy!
+            </h1>
+            <p className="text-xl">
+              Let’s keep going. Your age is one of the most important factors in
+              determining your policy value. As long as you are older than 65,
+              you’ve not only acquired a world of wisdom, but you’ll also be
+              able to see if you qualify for a settlement!
+            </p>
+            <label className="block mt-4 mb-5">What is your age?</label>
+            <input
+              type="text"
+              value={age}
+              placeholder="Enter your age"
+              onChange={(e) => {
+                setAge(e.target.value);
+              }}
+              className="border-1 border border-black py-3 px-4 bg-wwhite w-3/4"
+            />
+            <Button color="wgold mt-3" text="CONTINUE" handler={handleContinue} disabled={!age} />
+          </div>
+          <div className="flex-1 text-center md:text-right pt-5">
+            <Image src="/step_3.png" width="296" height="352" />
+          </div>
+        </div>
+      </Container>
     </>
   );
 };

@@ -4,7 +4,7 @@ const Blurb = ({ image, heading, text }) => {
   return (
     <div className="p-2">
       <Image src={image} height={84} width={150} />
-      <h3 className="text-wgreen font-bold py-2text-xl">{heading}</h3>
+      <h3 className="text-wgreen font-bold py-2 text-xl">{heading}</h3>
       <p>{text}</p>
     </div>
   );
@@ -15,7 +15,7 @@ const IconSection = () => {
 
     <div className="container py-20">
         <h2 className="text-5xl font-serif font-bold text-center mb-20"><span className="text-wgold ">What can I do</span> if I sell my policy?</h2>
-      <div className="grid md:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
         <Blurb
           image="/icons/medical_expenses.svg"
           heading="Medical expenses"

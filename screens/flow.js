@@ -12,12 +12,15 @@ import Steps from "../partials/Steps";
 const Flow = () => {
   const [state, setState] = useContext(AppContext);
 
+  const setCurrentStep = (step) => {
+    setState({...state, currentStep: step})
+  }
   return (
-    <div>
+    <div className="">
       <Container cName="bg-wgray px-5 py-5">
         <Header />
+        <Steps currentStep={state.currentStep} setCurrentStep={setCurrentStep} />
       </Container>
-      <Steps currentStep={state.currentStep} />
       {
         {
           1: <FirstNameStep />,
@@ -28,6 +31,7 @@ const Flow = () => {
           6: <SubmitStep />,
         }[state.currentStep]
       }
+
       <Footer />
     </div>
   );

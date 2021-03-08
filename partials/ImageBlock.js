@@ -9,7 +9,7 @@ const ImageBlock = () => {
           className="md:absolute right-1/2 bottom-0 max-h-full pt-10"
         />
         <Container>
-          <div className="md:w-1/2 ml-auto md:pt-48 pt-10 pb-32 pl-28 ">
+          <div className="md:w-1/2 ml-auto md:pt-48 pt-10 pb-32 px-6 md:pl-28 ">
             <h1 className="font-bold text-3xl pb-8 ">
               How much is my life insurance policy{" "}
               <span className="text-wgold">worth?</span>
@@ -37,7 +37,7 @@ const ImageBlock = () => {
           className="md:absolute left-1/2 top-0 max-h-full pb-10"
         />
         <Container>
-          <div className="md:w-1/2 mr-auto pb-48 pt-10 md:pt-32 pr-28">
+          <div className="md:w-1/2 mr-auto pb-48 pt-10 px-6 md:pt-32 md:pr-28">
             <h1 className="font-bold text-3xl pb-8 ">
               Is is <span className="text-wgold">safe</span> to sell my life
               policy?

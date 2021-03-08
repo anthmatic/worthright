@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="md:flex justify-between items-center w-full">
+    <div className="md:flex justify-between items-center w-full text-center md:text-left">
       <Image src="/logo_full.svg" width={100} height={25} />
       <p className="text-sm">TALK TO AN ADVISOR - CALL (555) 555-5555</p>
     </div>
@@ -11,7 +11,7 @@ const Header = () => {
 
 const Footer = () => {
   return (
-    <div class="bg-wfooter p-6">
+    <div class="bg-wfooter p-6 text-center md:text-left">
       <Container>
         <div className="md:flex justify-between items-center">
       <Image src="/footer_logo.png" width={128} height={30} />
@@ -30,9 +30,9 @@ const Container = (props) => {
   );
 };
 
-const Button = ({id, text, handler, color, align}) => {
+const Button = ({id, text, handler, color, align, disabled}) => {
   return (
-    <button type="button" onClick={handler} id={id} className={`bg-${color ? color : 'wblack'} ${align === 'center' ? "mx-auto" : ""} block text-wwhite py-3 px-6 rounded`}>
+    <button type="button" onClick={handler} id={id} className={`${ disabled && `opacity-30 cursor-not-allowed`} bg-${color ? color : 'wblack'} ${align === 'center' ? "mx-auto" : ""} block text-wwhite py-3 px-6 rounded`}>
       {text}
     </button>
   )
