@@ -16,7 +16,7 @@ const AgeStep = () => {
 
 const validateAge = (newAge) => {
   setAge(newAge);
-  if (isNaN(newAge) || newAge < 64) {
+  if (isNaN(newAge) || newAge < 65) {
     setError(true)
     setDisabled(true)
   } else {
