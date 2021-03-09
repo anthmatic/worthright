@@ -9,12 +9,18 @@ import axios from "axios";
 const SubmitStep = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [error, setError] = useState(false);
   const [state, setState] = useContext(AppContext);
   const router = useRouter();
 
   const handleContinue = async () => {
-    setState({ ...state, email, phone, currentStep: 7 });
-    await handleFormSubmit();
+    setState({ ...state, email, phone });
+    try {
+      await handleFormSubmit();
+    } catch {
+      setError(true);
+      return;
+    }
     router.push("/confirmation");
   };
 
@@ -22,7 +28,6 @@ const SubmitStep = () => {
     return <div>{JSON.stringify()}</div>;
   };
   const handleFormSubmit = async () => {
-
     const params = {
       fields: [
         {
@@ -39,11 +44,11 @@ const SubmitStep = () => {
         },
         {
           name: "kosmos___policy_face_amount",
-          value: state.amount | 0,
+          value: state.amount || 0,
         },
         {
           name: "kosmos___policy_face_amount__don_t_know_",
-          value: state.unkown || false,
+          value: state.unknown || "false",
         },
         {
           name: "intent___what_would_you_do_with_extra_funds_",
@@ -55,31 +60,21 @@ const SubmitStep = () => {
         },
         {
           name: "phone",
-          value: state.phone,
+          value: phone,
         },
         {
           name: "email",
-          value: state.email,
+          value: email,
         },
       ],
       context: {
         hutk: Cookies.get("hubspotutk"),
         pageUri: "www.example.com/page",
         pageName: "Example page",
-      }
-    };
-const URL = `https://api.hsforms.com/submissions/v3/integration/submit/7142976/f80ca816-881a-4cfc-9396-a2d156891252`;
-    const response = await axios.request({
-      url: URL,
-      method: "POST",
-      mode: "same-origin",
-      cache: "no-cache",
-      headers: {
-        "Content-Type": "application/json",
       },
-      data: JSON.stringify(params),
-    });
-    console.log(response)
+    };
+    const URL = `https://api.hsforms.com/submissions/v3/integration/submit/7142976/f80ca816-881a-4cfc-9396-a2d156891252`;
+    await axios.post(URL, params);
   };
   return (
     <>
@@ -116,6 +111,7 @@ const URL = `https://api.hsforms.com/submissions/v3/integration/submit/7142976/f
               handler={handleContinue}
               disabled={!email || !phone}
             />
+            { error && "There was an error processing this form"}
           </div>
           <div className="flex-1 text-center md:text-right pt-5">
             <Image src="/step_1.png" width="503" height="152" />
