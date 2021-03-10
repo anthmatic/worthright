@@ -8,7 +8,7 @@ import NumberFormat from "react-number-format";
 
 const PolicyAmountStep = () => {
   const [state, setState] = useContext(AppContext);
-  const [amount, setAmount] = useState(state.amount || 0);
+  const [amount, setAmount] = useState(state.amount);
   const [unknown, setUnknown] = useState(state.unknown || false);
 
   const handleContinue = () => {
