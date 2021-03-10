@@ -3,9 +3,9 @@ import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Cookies from "js-cookie";
+import Cookies, { set } from "js-cookie";
 import axios from "axios";
-import Input from 'react-phone-number-input/input'
+import NumberFormat from "react-number-format";
 
 const SubmitStep = () => {
   const [email, setEmail] = useState("");
@@ -13,8 +13,6 @@ const SubmitStep = () => {
   const [error, setError] = useState(false);
   const [state, setState] = useContext(AppContext);
   const router = useRouter();
-
-
 
   const handleContinue = async () => {
     setState({ ...state, email, phone });
@@ -99,14 +97,24 @@ const SubmitStep = () => {
               }}
               className="border-1 border border-black py-3 px-4 bg-wwhite w-3/4 mb-2"
             />
-            <Input country="US" value={phone} onChange={setPhone} placeholder="Phone number" className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2" />
+            <NumberFormat
+              format="+1 (###) ###-####"
+              mask="_"
+              value={phone}
+              onValueChange={(values) => {
+                const { formattedValue } = values;
+                setPhone(formattedValue);
+              }}
+              placeholder="Phone number"
+              className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2"
+            />
             <Button
               color="wgold mt-3"
               text="SEE MY RESULTS"
               handler={handleContinue}
               disabled={!email || !phone}
             />
-            { error && "There was an error processing this form"}
+            {error && "There was an error processing this form"}
           </div>
           <div className="flex-1 text-center md:text-right pt-5">
             <Image src="/step_1.png" width="503" height="152" />

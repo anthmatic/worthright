@@ -11,7 +11,9 @@ const AgeStep = () => {
   const [disabled, setDisabled] = useState(true);
 
   const handleContinue = () => {
+    if (!disabled) {
     setState({ ...state, age, currentStep: 4 });
+    }
   };
 
 const validateAge = (newAge) => {
