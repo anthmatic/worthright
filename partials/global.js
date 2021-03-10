@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <div className="md:flex justify-between items-center w-full text-center md:text-left">
       <Image src="/logo_full.svg" width={100} height={25} />
-      <p className="text-sm">TALK TO AN ADVISOR - CALL (877) 777-2918</p>
+      <p className="text-sm">TALK TO AN ADVISOR - CALL <a href="tel:(877) 777-2918">(877) 777-2918</a></p>
     </div>
   );
 };

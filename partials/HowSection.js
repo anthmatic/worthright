@@ -47,7 +47,7 @@ const HowSection = () => {
       </div>
       <div className="text-center mt-10">
       <Button text="GET MY ESTIMATE" id="estimate" color="wgold" align="center" handler={scrollUp} />
-      <a href="tel:555-5555" className="underline inline-block mt-4">Or, call us at (877) 777-2918</a>
+      <a href="tel:555-5555" className="underline inline-block mt-4">Or, call us at <a href="tel:(877) 777-2918">(877) 777-2918</a></a>
       </div>
     </div>
     </div>

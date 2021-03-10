@@ -15,7 +15,6 @@ const ConfirmationScreen = () => {
         <ConfirmationNoEstimate />
       <AboutOverlap />
       <Footer />
-      {JSON.stringify(state)}
     </> 
   );
 };

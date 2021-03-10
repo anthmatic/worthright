@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Cookies from "js-cookie";
 import axios from "axios";
+import Input from 'react-phone-number-input/input'
 
 const SubmitStep = () => {
   const [email, setEmail] = useState("");
@@ -12,6 +13,8 @@ const SubmitStep = () => {
   const [error, setError] = useState(false);
   const [state, setState] = useContext(AppContext);
   const router = useRouter();
+
+
 
   const handleContinue = async () => {
     setState({ ...state, email, phone });
@@ -96,15 +99,7 @@ const SubmitStep = () => {
               }}
               className="border-1 border border-black py-3 px-4 bg-wwhite w-3/4 mb-2"
             />
-            <input
-              type="text"
-              value={phone}
-              placeholder="Phone number"
-              onChange={(e) => {
-                setPhone(e.target.value);
-              }}
-              className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2"
-            />
+            <Input country="US" value={phone} onChange={setPhone} placeholder="Phone number" className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2" />
             <Button
               color="wgold mt-3"
               text="SEE MY RESULTS"

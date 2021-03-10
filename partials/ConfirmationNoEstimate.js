@@ -12,7 +12,7 @@ const ConfirmationNoEstimate = () => {
           You may qualify for a settlement!
         </p>
         <p className="text-xl mt-8">
-          <strong>Call us at (877) 777-2918.</strong> We can help you better understand your
+          <strong>Call us at <a href="tel:(877) 777-2918">(877) 777-2918</a>.</strong> We can help you better understand your
           options, so you can make the right choice for you.{" "}
         </p>
       </div>
