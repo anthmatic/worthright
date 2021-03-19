@@ -6,14 +6,16 @@ const ConfirmationNoEstimate = () => {
       <div className="container p-20 pb-32 text-center max-w-3xl ">
         <Image src="/pinecone.png" height={291} width={251} />
         <h2 className="text-5xl font-serif font-bold text-center mt-8 mb-8">
-          Good news!
+        Good News! 
         </h2>
         <p className="text-xl">
-          You may qualify for a settlement!
+        You may qualify for a policy payout.
         </p>
         <p className="text-xl mt-8">
-          <strong>Call us at <a href="tel:(877) 777-2918">(877) 777-2918</a>.</strong> We can help you better understand your
-          options, so you can make the right choice for you.{" "}
+        We've sent this, as well as some other helpful information to the email you provided. A specialist will reach out and give you an opportunity to ask whatever questions you'd like and run through what might be next in the process. 
+        </p>
+        <p className="text-xl mt-8">
+        If you have questions in the meantime, feel free to call us at (877) 777-2918.
         </p>
       </div>
     </div>

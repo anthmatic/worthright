@@ -20,8 +20,7 @@ const ImageBlock = () => {
               of your life insurance policy depends on many factors, but all
               things being equal, the value of a life policy today is
               significantly more valuable when converted to a life settlement,
-              compared to letting the policy lapse, or selling it back to the
-              insurance company.
+              compared to letting the policy lapse, or surrendering it back to the insurance company.
               <br />
               <br />
               <span className="text-wgreen font-bold">William</span> received
@@ -40,7 +39,7 @@ const ImageBlock = () => {
         <Container>
           <div className="md:w-1/2 mr-auto pb-48 pt-10 px-6 md:pt-32 md:pr-28">
             <h1 className="font-bold text-3xl pb-8 ">
-              Is is <span className="text-wgold">safe</span> to sell my life
+              Is it <span className="text-wgold">safe</span> to sell my life
               policy?
             </h1>
             <p className="text-lg ">

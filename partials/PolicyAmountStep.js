@@ -1,4 +1,4 @@
-import { Button, Container } from "./global";
+import { Button, Container, scrollUp } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
 import Logos from "../partials/Logos";
@@ -12,6 +12,7 @@ const PolicyAmountStep = () => {
   const [unknown, setUnknown] = useState(state.unknown || false);
 
   const handleContinue = () => {
+    scrollUp()
     setState({ ...state, amount, unknown, currentStep: 5 });
   };
 

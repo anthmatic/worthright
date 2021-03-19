@@ -1,7 +1,7 @@
-import { Button, Container } from "./global";
+import { Button, Container, scrollUp } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
-import Logos from "../partials/Logos"
+import Logos from "../partials/Logos";
 import Image from "next/image";
 
 const AgeStep = () => {
@@ -12,20 +12,21 @@ const AgeStep = () => {
 
   const handleContinue = () => {
     if (!disabled) {
-    setState({ ...state, age, currentStep: 4 });
+      scrollUp()
+      setState({ ...state, age, currentStep: 4 });
     }
   };
 
-const validateAge = (newAge) => {
-  setAge(newAge);
-  if (isNaN(newAge) || newAge < 65) {
-    setError(true)
-    setDisabled(true)
-  } else {
-    setError(false);
-    setDisabled(false);
-  }
-}
+  const validateAge = (newAge) => {
+    setAge(newAge);
+    if (isNaN(newAge) || newAge < 65) {
+      setError(true);
+      setDisabled(true);
+    } else {
+      setError(false);
+      setDisabled(false);
+    }
+  };
 
   return (
     <>
@@ -37,9 +38,9 @@ const validateAge = (newAge) => {
             </h1>
             <p className="text-xl">
               Let’s keep going. Your age is one of the most important factors in
-              determining your policy value. As long as you are older than 65,
-              you’ve not only acquired a world of wisdom, but you’ll also be
-              able to see if you qualify for a settlement!
+              determining how much you could earn from your policy. As long as
+              you are older than 65, you’ve not only acquired a world of wisdom,
+              but you’ll also be able to see if you qualify for a settlement!
             </p>
             <label className="block mt-4 mb-5">What is your age?</label>
             <input
@@ -47,12 +48,21 @@ const validateAge = (newAge) => {
               value={age}
               placeholder="Enter your age"
               onChange={(e) => {
-                validateAge(e.target.value)
+                validateAge(e.target.value);
               }}
               className="border-1 border border-black py-3 px-4 bg-wwhite w-3/4"
             />
-            {error && <span className="block text-sm text-red pt-1">Please enter an age greater than 64</span>}
-            <Button color="wgold mt-3" text="CONTINUE" handler={handleContinue} disabled={disabled} />
+            {error && (
+              <span className="block text-sm text-red pt-1">
+                Please enter an age greater than 64
+              </span>
+            )}
+            <Button
+              color="wgold mt-3"
+              text="CONTINUE"
+              handler={handleContinue}
+              disabled={disabled}
+            />
           </div>
           <div className="flex-1 text-center md:text-right pt-5">
             <Image src="/step_3.png" width="296" height="352" />

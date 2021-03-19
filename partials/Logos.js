@@ -10,7 +10,7 @@ const Logos = () => {
         <Image src="/logo_aging_life_care.svg" width={185} height={70} />
       </div>
       <div className="my-4 md:m-0">
-        <Image src="/logo_techstars.svg" width={133} height={24} />
+        <Image src="/logo_aging20.png" width={136} height={36} />
       </div>
       <div className="my-4 md:m-0">
         <Image src="/logo_afcpe.svg" width={155} height={57} />

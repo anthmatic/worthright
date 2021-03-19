@@ -19,7 +19,7 @@ const PersonSection = ({ title }) => {
     }
     return {
       __html:
-        '<span class="text-wgold ">What can I do</span> if I sell my policy?',
+        '<span class="text-wgold ">What have others done</span> with their policy?',
     };
   };
   return (

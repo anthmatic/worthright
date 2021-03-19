@@ -14,8 +14,8 @@ const HowHealthySection = () => {
   return (
 
     <div className="container py-20 text-center md:text-left">
-        <h2 className="text-5xl font-serif font-bold text-center mb-4">How healthy am I?</h2>
-        <p className="text-lg  mb-20 max-w-2xl mx-auto text-center">Your health is important, not just to you and your family, but for valuing your policy too. Want to know one thing we’ve learned over our years of experience? Your policy may very well hold more value today than you think.</p>
+        {/* <h2 className="text-5xl font-serif font-bold text-center mb-4">How healthy am I?</h2>
+        <p className="text-lg  mb-20 max-w-2xl mx-auto text-center">Your health is important, not just to you and your family, but for valuing your policy too. Want to know one thing we’ve learned over our years of experience? Your policy may very well hold more value today than you think.</p> */}
       <div className="grid md:grid-cols-4 gap-8">
         <Blurb
           image="/icons/100-heart.png"

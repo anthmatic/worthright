@@ -27,22 +27,22 @@ const HowSection = () => {
           image="/icons/coins.png"
           height={59}
           width={93}
-          heading="Get your estimate."
-          text="Tell us what success looks like and we’ll show you how to achieve it."
+          heading="Get your Estimate"
+          text="Share some basic information and we'll show you what might be available from your policy today."
         />
         <Person
           image="/icons/talk.png"
           height={86}
           width={86}
-          heading="Talk to a Worthright Specialist."
-          text="We’ll ask some questions and show you the complete financial situation now, and how to achieve that going forward."
+          heading="Talk to a Specialist"
+          text="Go a bit deeper. Understand the process, time line, and ask questions you want answered in order to feel comfortable. It's all free of charge."
         />
         <Person
           image="/icons/check.png"
           height={78}
           width={88}
-          heading="Do what’s best for you."
-          text="Worthright shows you hidden sources of funding and can help you convert them to cash now, so you can achieve your goals."
+          heading="Do what’s best for you"
+          text="We're here to educate you on what's possible, and advocate for your best interest - not to sell you."
         />
       </div>
       <div className="text-center mt-10">

@@ -1,4 +1,4 @@
-import { Button,Container } from "./global";
+import { Button,Container, scrollUp } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
 import Logos from "../partials/Logos"
@@ -10,6 +10,7 @@ const HealthStep = () => {
   const [health, setHealth] = useState(state.health || "");
 
   const handleContinue = () => {
+    scrollUp()
     setState({ ...state, health, currentStep: 6 });
   };
 
@@ -84,7 +85,6 @@ const HealthStep = () => {
       </div>
     </div>
       </Container>
-      <Logos />
       <HowHealthySection />
     </>
   );

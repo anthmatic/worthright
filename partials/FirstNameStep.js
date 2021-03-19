@@ -1,4 +1,4 @@
-import { Button, Container } from "./global";
+import { Button, Container, scrollUp } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
 import Logos from "../partials/Logos";
@@ -10,6 +10,7 @@ const FirstNameStep = () => {
   const [name, setName] = useState(state.name || "");
 
   const handleContinue = () => {
+    scrollUp()
     setState({ ...state, name, currentStep: 2 });
   };
 
@@ -23,7 +24,7 @@ const FirstNameStep = () => {
               <span className="lowercase">
                 {state.goal ? state.goal : "??????"}
               </span>
-              !
+              .
             </h1>
             <p className="text-xl">
               Let’s get started. We’ll do our best to see if we can help you

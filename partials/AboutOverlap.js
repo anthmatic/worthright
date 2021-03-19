@@ -9,7 +9,7 @@ const AboutOverlap = () => {
        About Worthright
       </h2>
       <p className="text-xl mb-4">We're on a mission to answer the fundamental question of how to live and afford a wonderful life as we age.</p>
-      <Link href="/"><span className="text-xl underline cursor-pointer">Learn more about Worthright &gt;</span></Link>
+      {/* <Link href="/"><span className="text-xl underline cursor-pointer">Learn more about Worthright &gt;</span></Link> */}
       </div>
   );
 };

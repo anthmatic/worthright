@@ -1,4 +1,4 @@
-import { Button, Container } from "./global";
+import { Button, Container, scrollUp } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
 import Logos from "../partials/Logos";
@@ -13,7 +13,8 @@ const GenderStep = () => {
     if (!gender) {
       return setError(true);
     } else {
-    setState({ ...state, gender, currentStep: 3 });
+      scrollUp()
+      setState({ ...state, gender, currentStep: 3 });
     }
   };
 
@@ -28,7 +29,7 @@ const GenderStep = () => {
             <p className="text-xl">
               Taking the guesswork out of how to maintain a full life as we age
               means knowing what the options are. Let’s find out how much value
-              your life policy holds today.
+              your life insurance policy holds today.
             </p>
             <div className="block mt-4 mb-5">What is your gender?</div>
             <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
@@ -81,11 +82,14 @@ const GenderStep = () => {
       </Container>
       <Logos />
       <Container>
-                <div className="pt-20 pb-32 text-center max-w-4xl mx-auto px-5">
-                  <h2 className="text-5xl font-serif font-bold mb-10">Did you know?</h2>
-                  <p className="text-xl leading-normal mb-10">It’s even possible to keep some a portion of your policy’s benefit intact, just in case you want to leave it for your beneficiaries. </p>
-                  <Image src="/flags.png" width="419" height="134" />
-                </div>
+        <div className="pt-20 pb-32 text-center max-w-4xl mx-auto px-5">
+          <h2 className="text-5xl font-serif font-bold mb-10">Did you know?</h2>
+          <p className="text-xl leading-normal mb-10">
+            It’s even possible to keep some a portion of your policy’s benefit
+            intact, just in case you want to leave it for your beneficiaries.{" "}
+          </p>
+          <Image src="/flags.png" width="419" height="134" />
+        </div>
       </Container>
     </>
   );

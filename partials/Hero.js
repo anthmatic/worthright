@@ -5,10 +5,10 @@ const Hero = () => {
   return (
     <div className="relative" id="top">
         <img
-          src="/image_block/sally.png"
-          className="md:absolute right-1/2 top-0 max-h-full pb-10 mr-20"
+          src="/image_block/sally2.png"
+          className="md:absolute right-1/2 top-0 max-h-full md:pb-10 mr-20"
         />
-      <div className="md:w-1/2 ml-auto py-32">
+      <div className="md:w-1/2 ml-auto py-10 md:py-32">
         <h1 className="font-serif font-bold text-5xl pb-8 leading-tight ">
           Sally received <span className="text-wgold">$227,500</span> to pay for
           expenses <span className="text-wgold">today.</span>

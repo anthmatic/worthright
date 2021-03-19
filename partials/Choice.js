@@ -1,10 +1,11 @@
 import { useState, useContext } from "react";
-import { Button } from "./global";
+import { Button, scrollUp } from "./global";
 import { AppContext } from "../screens/AppContext";
 const Choice = () => {
   const [goal, setGoal] = useState("placeholder");
   const [state, setState] = useContext(AppContext);
   const handleSubmit = () => {
+    scrollUp()
     setState({ goal, currentStep: 1 });
   };
   return (

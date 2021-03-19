@@ -1,4 +1,4 @@
-import { Button, Container } from "./global";
+import { Button, Container, scrollUp } from "./global";
 import { useState, useContext } from "react";
 import { AppContext } from "../screens/AppContext";
 import { useRouter } from "next/router";
@@ -15,6 +15,7 @@ const SubmitStep = () => {
   const router = useRouter();
 
   const handleContinue = async () => {
+    scrollUp()
     setState({ ...state, email, phone });
     try {
       await handleFormSubmit();
@@ -86,7 +87,7 @@ const SubmitStep = () => {
               We’ve got your estimate <span className="text-wgold">ready.</span>
             </h1>
             <label className="block mt-4 mb-5">
-              Let us know how to send your estimate to you.
+            Where should we send it?
             </label>
             <input
               type="text"
@@ -112,7 +113,7 @@ const SubmitStep = () => {
               color="wgold mt-3"
               text="SEE MY RESULTS"
               handler={handleContinue}
-              disabled={!email || !phone}
+              disabled={!email}
             />
             {error && "There was an error processing this form"}
           </div>
