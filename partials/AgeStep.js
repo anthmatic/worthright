@@ -60,6 +60,7 @@ const AgeStep = () => {
             <Button
               color="wgold mt-3"
               text="CONTINUE"
+              id="step4"
               handler={handleContinue}
               disabled={disabled}
             />

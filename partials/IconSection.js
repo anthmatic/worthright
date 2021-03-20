@@ -10,11 +10,20 @@ const Blurb = ({ image, heading, text }) => {
   );
 };
 
-const IconSection = () => {
+const IconSection = ({title}) => {
+  const htmlTitle = () => {
+    if (title) {
+      return { __html: title };
+    }
+    return {
+      __html:
+        '<span class="text-wgold ">What can I do</span> if I sell my policy?',
+    };
+  };
   return (
 
     <div className="container py-20 px-5">
-        <h2 className="text-5xl font-serif font-bold text-center mb-20"><span className="text-wgold ">What can I do</span> if I sell my policy?</h2>
+        <h2 className="text-5xl font-serif font-bold text-center mb-20" dangerouslySetInnerHTML={htmlTitle()}></h2>
       <div className="grid md:grid-cols-4 gap-8 text-center md:text-left">
         <Blurb
           image="/icons/medical_expenses.svg"

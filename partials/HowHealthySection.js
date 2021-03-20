@@ -4,8 +4,8 @@ const Blurb = ({ image, heading, text }) => {
   return (
     <div className="p-2">
       <Image src={image} height={108} width={115} />
-      <h3 className="pt-6 pb-3 text-xl">{heading}</h3>
-      <p className="font-light">{text}</p>
+      <h3 className="pt-6 pb-3 text-xl text-wgreen font-bold">{heading}</h3>
+      <p className="font-light text-lg">{text}</p>
     </div>
   );
 };
@@ -19,19 +19,19 @@ const HowHealthySection = () => {
       <div className="grid md:grid-cols-4 gap-8">
         <Blurb
           image="/icons/100-heart.png"
-          heading="Medical expenses"
-          text="Rising healthcare costs in addition to treatments, therapy, and medication expenses can quickly pile up."
+          heading="Healthy"
+          text="Physically, socially, and mentally fit, with the absence of disease."
         />
-        <Blurb image="/icons/75-heart.png" heading="Education tuition costs" text="Many parents still support adult children or grandchildren, especially when it comes to paying for their school tuition." />
+        <Blurb image="/icons/75-heart.png" heading="Minor conditions" text="Chronic but manageable conditions such as diabetes or hypertension." />
         <Blurb
           image="/icons/50-heart.png"
-          heading="Trip of a lifetime"
-          text="Has travel always excited you? Seeing a new place near or far is a life-changing moment and one to be cherished forever. "
+          heading="Serious conditions"
+          text="Severe conditions such as cancer or coronary artery disease (CAD)."
         />
         <Blurb
           image="/icons/25-heart.png"
-          heading="Family vacations"
-          text="Sometimes there’s extra cash in a policy that isn’t needed any longer. Don’t let it lapse. Create an experience for your family."
+          heading="Terminal conditions"
+          text="Irreversible conditions that severely reduce life expectancy such as late stage cancer."
         />
       </div>
     </div>

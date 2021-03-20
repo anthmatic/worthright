@@ -111,6 +111,7 @@ const SubmitStep = () => {
             />
             <Button
               color="wgold mt-3"
+              id="step7"
               text="SEE MY RESULTS"
               handler={handleContinue}
               disabled={!email}

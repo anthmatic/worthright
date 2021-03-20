@@ -42,6 +42,7 @@ const FirstNameStep = () => {
             />
             <Button
               color="wgold mt-3"
+              id="step2"
               text="CONTINUE"
               handler={handleContinue}
               disabled={!name}
@@ -53,7 +54,7 @@ const FirstNameStep = () => {
         </div>
       </Container>
       <Logos />
-      <IconSection />
+      <IconSection title={`<span class="text-wgold ">What would you do</span>  with extra funds today?`} />
     </>
   );
 };

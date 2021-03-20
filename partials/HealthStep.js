@@ -78,7 +78,7 @@ const HealthStep = () => {
         />
         <span>Terminal conditions</span>
       </label>
-      <Button color="wgold mt-3" text="CONTINUE" handler={handleContinue} disabled={!health} />
+      <Button id="step6" color="wgold mt-3" text="CONTINUE" handler={handleContinue} disabled={!health} />
       </div>
       <div className="flex-1 text-center md:text-right pt-5">
         <Image src="/step_5.png" width="261" height="283"/>

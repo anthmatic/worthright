@@ -70,6 +70,7 @@ const GenderStep = () => {
             </label>
             <Button
               color="wgold mt-3"
+              id="step3"
               disabled={!gender}
               text="CONTINUE"
               handler={handleContinue}

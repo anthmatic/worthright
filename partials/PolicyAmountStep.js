@@ -57,6 +57,7 @@ const PolicyAmountStep = () => {
             </label>
             <Button
               color="wgold mt-3"
+              id="step5"
               text="CONTINUE"
               handler={handleContinue}
               disabled={!unknown && !amount}

@@ -45,6 +45,7 @@ const Choice = () => {
       </div>
       <button
         type="button"
+        id="step1"
         className="border-1 border border-wgold bg-wgold text-wwhite block py-4 px-6 whitespace-nowrap"
         onClick={handleSubmit}
         disabled={goal == "placeholder"}
