@@ -97,7 +97,7 @@ const SubmitStep = () => {
         <div className="md:flex pb-20">
           <div className="flex-1">
             <h1 className="text-5xl font-serif font-bold pt-4 mb-6">
-              We’ve got your estimate <span className="text-wgold">ready.</span>
+              We've got some helpful information for you regarding your policy
             </h1>
             <label className="block mt-4 mb-5">Where should we send it?</label>
             <input
