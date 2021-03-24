@@ -5,17 +5,31 @@ import Logos from "../partials/Logos";
 import Image from "next/image";
 import PersonSection from "./PersonSection";
 import NumberFormat from "react-number-format";
+import { debounce } from "debounce";
 
 const PolicyAmountStep = () => {
   const [state, setState] = useContext(AppContext);
   const [amount, setAmount] = useState(state.amount);
   const [unknown, setUnknown] = useState(state.unknown || false);
+  const [error, setError] = useState(false);
 
   const handleContinue = () => {
-    scrollUp()
+    scrollUp();
     setState({ ...state, amount, unknown, currentStep: 5 });
   };
 
+  const validateAmount = (newAmount) => {
+    setAmount(newAmount);
+    if (newAmount && newAmount < 50000) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+  };
+
+  const isDisabled = () => {
+    return (!unknown && !amount) || error;
+  };
   return (
     <>
       <Container cName="bg-wgray px-5 pb-5">
@@ -38,7 +52,7 @@ const PolicyAmountStep = () => {
               prefix={"$"}
               onValueChange={(values) => {
                 const { formattedValue, value } = values;
-                setAmount(value);
+                debounce(validateAmount(value), 200);
               }}
               thousandSeparator={true}
               placeholder="Enter your policy face amount"
@@ -55,12 +69,17 @@ const PolicyAmountStep = () => {
               />
               <span>I don't know</span>
             </label>
+            {error && (
+              <span className="block text-sm text-red pt-1">
+                The policy face amount must be at least $50,000 or more.
+              </span>
+            )}
             <Button
               color="wgold mt-3"
               id="step5"
               text="CONTINUE"
               handler={handleContinue}
-              disabled={!unknown && !amount}
+              disabled={isDisabled()}
             />
           </div>
           <div className="flex-1 text-center md:text-right pt-5">

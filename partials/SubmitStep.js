@@ -11,19 +11,14 @@ const SubmitStep = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const [state, setState] = useContext(AppContext);
   const router = useRouter();
 
   const handleContinue = async () => {
-    scrollUp()
+    scrollUp();
     setState({ ...state, email, phone });
-    try {
-      await handleFormSubmit();
-    } catch {
-      setError(true);
-      return;
-    }
-    router.push("/confirmation");
+    await handleFormSubmit();
   };
 
   const submitData = () => {
@@ -71,12 +66,30 @@ const SubmitStep = () => {
       ],
       context: {
         hutk: Cookies.get("hubspotutk"),
-        pageUri: "www.example.com/page",
-        pageName: "Example page",
+        pageUri: "https://worthrightfinance.com/",
+        pageName: "Worthright Finance",
       },
     };
     const URL = `https://api.hsforms.com/submissions/v3/integration/submit/7142976/f80ca816-881a-4cfc-9396-a2d156891252`;
-    await axios.post(URL, params);
+    try {
+      await axios.post(URL, params);
+    } catch (e) {
+      const errorData = e.response.data;
+
+      if (
+        errorData.errors.some((error) => {
+          return error.errorType === "INVALID_EMAIL";
+        })
+      ) {
+        setErrorMessage("Please enter a valid email address");
+      } else {
+        setErrorMessage("There was an error processing this form");
+      }
+      setError(true);
+      return;
+    }
+
+    router.push("/confirmation");
   };
   return (
     <>
@@ -86,9 +99,7 @@ const SubmitStep = () => {
             <h1 className="text-5xl font-serif font-bold pt-4 mb-6">
               We’ve got your estimate <span className="text-wgold">ready.</span>
             </h1>
-            <label className="block mt-4 mb-5">
-            Where should we send it?
-            </label>
+            <label className="block mt-4 mb-5">Where should we send it?</label>
             <input
               type="text"
               value={email}
@@ -116,7 +127,7 @@ const SubmitStep = () => {
               handler={handleContinue}
               disabled={!email}
             />
-            {error && "There was an error processing this form"}
+            {error && errorMessage}
           </div>
           <div className="flex-1 text-center md:text-right pt-5">
             <Image src="/step_1.png" width="503" height="152" />

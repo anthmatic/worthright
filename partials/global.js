@@ -10,7 +10,7 @@ const Header = ({ handleLogoClick }) => {
         onClick={handleLogoClick}
       />
       <p className="text-sm">
-        TALK TO AN SPECIALIST - CALL{" "}
+        TALK TO A SPECIALIST - CALL{" "}
         <a href="tel:(877) 777-2918">(877) 777-2918</a>
       </p>
     </div>
@@ -65,7 +65,10 @@ const Footer = () => {
             </a>
           </div> */}
           <div className="footer-title">
-            <a href="https://www.worthright.com/privacy-policy" className="link">
+            <a
+              href="https://www.worthright.com/privacy-policy"
+              className="link"
+            >
               Privacy Policy
             </a>
           </div>
@@ -98,20 +101,22 @@ const Footer = () => {
       </div> */}
       <div className="footer-block horizontal">
         <p className="footer-text">
-          Worthright is a
+          Worthright is a{" "}
           <a
             href="https://www.bbb.org/us/ma/boston/profile/financial-services/worthright-inc-0021-538119"
             target="_blank"
             className="footer-link"
           >
+            {" "}
             Better Business Bureau Accredited Business
-          </a>
-          and has achieved the
+          </a>{" "}
+          and has achieved the{" "}
           <a
             href="https://aws.amazon.com/security/"
             target="_blank"
             className="footer-link"
           >
+            {" "}
             Amazon Web Services Security Best Practices Certification
           </a>
         </p>
@@ -136,10 +141,11 @@ const Footer = () => {
       </div>
       <div className="footer-block vertical">
         <div className="footer-text">
-          Worthright is a marketing company. We are neither a life settlement
-          broker nor a life settlement provider, and we do not represent the
-          policy seller. We will help you understand your options and refer you
-          to the most appropriate licensed entity that will meet your needs.
+          Worthright Finance is an experience from Worthright, an independent
+          technology company. We are neither a life settlement broker nor a life
+          settlement provider. We will help you understand your options and
+          refer you to the most appropriate licensed entity that will meet your
+          needs.
         </div>
       </div>
     </div>

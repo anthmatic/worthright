@@ -59,10 +59,10 @@ const GenderStep = () => {
             <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
               <input
                 type="radio"
-                value="omit"
-                checked={gender === "omit"}
+                value="Prefer not to disclose"
+                checked={gender === "Prefer not to disclose"}
                 onChange={(e) => {
-                  setGender("omit");
+                  setGender("Prefer not to disclose");
                 }}
                 className="border-1 border border-black py-3 px-4 bg-wwhite"
               />
