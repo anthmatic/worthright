@@ -5,7 +5,6 @@ import Logos from "../partials/Logos";
 import Image from "next/image";
 import PersonSection from "./PersonSection";
 import NumberFormat from "react-number-format";
-import { debounce } from "debounce";
 
 const PolicyAmountStep = () => {
   const [state, setState] = useContext(AppContext);
@@ -52,7 +51,7 @@ const PolicyAmountStep = () => {
               prefix={"$"}
               onValueChange={(values) => {
                 const { formattedValue, value } = values;
-                debounce(validateAmount(value), 200);
+                validateAmount(value);
               }}
               thousandSeparator={true}
               placeholder="Enter your policy face amount"
