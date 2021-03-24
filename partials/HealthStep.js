@@ -33,10 +33,10 @@ const HealthStep = () => {
       <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
         <input
           type="radio"
-          value="healthy"
-          checked={health === "healthy"}
+          value="Healthy"
+          checked={health === "Healthy"}
           onChange={(e) => {
-            setHealth("healthy");
+            setHealth("Healthy");
           }}
           className="border-1 border border-black py-3 px-4 bg-wwhite"
         />
@@ -45,10 +45,10 @@ const HealthStep = () => {
       <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
         <input
           type="radio"
-          value="minor conditions"
-          checked={health === "minor conditions"}
+          value="Minor conditions"
+          checked={health === "Minor conditions"}
           onChange={(e) => {
-            setHealth("minor conditions");
+            setHealth("Minor conditions");
           }}
           className="border-1 border border-black py-3 px-4 bg-wwhite"
         />
@@ -57,10 +57,10 @@ const HealthStep = () => {
       <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
         <input
           type="radio"
-          value="serious conditions"
-          checked={health === "serious conditions"}
+          value="Serious conditions"
+          checked={health === "Serious conditions"}
           onChange={(e) => {
-            setHealth("serious conditions");
+            setHealth("Serious conditions");
           }}
           className="border-1 border border-black py-3 px-4 bg-wwhite"
         />
@@ -69,10 +69,10 @@ const HealthStep = () => {
       <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
         <input
           type="radio"
-          value="terminal conditions"
-          checked={health === "terminal conditions"}
+          value="Terminal conditions"
+          checked={health === "Terminal conditions"}
           onChange={(e) => {
-            setHealth("terminal conditions");
+            setHealth("Terminal conditions");
           }}
           className="border-1 border border-black py-3 px-4 bg-wwhite"
         />

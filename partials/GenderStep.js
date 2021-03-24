@@ -35,10 +35,10 @@ const GenderStep = () => {
             <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
               <input
                 type="radio"
-                value="male"
-                checked={gender === "male"}
+                value="Male"
+                checked={gender === "Male"}
                 onChange={(e) => {
-                  setGender("male");
+                  setGender("Male");
                 }}
                 className="border-1 border border-black py-3 px-4 bg-wwhite"
               />
@@ -47,10 +47,10 @@ const GenderStep = () => {
             <label className="border-1 border border-black py-3 px-4 bg-wwhite block w-3/4 mb-2 radio">
               <input
                 type="radio"
-                value="female"
-                checked={gender === "female"}
+                value="Female"
+                checked={gender === "Female"}
                 onChange={(e) => {
-                  setGender("female");
+                  setGender("Female");
                 }}
                 className="border-1 border border-black py-3 px-4 bg-wwhite "
               />
