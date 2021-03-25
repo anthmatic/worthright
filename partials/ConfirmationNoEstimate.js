@@ -8,9 +8,6 @@ const ConfirmationNoEstimate = () => {
         <h2 className="text-5xl font-serif font-bold text-center mt-8 mb-8">
         Good News! 
         </h2>
-        <p className="text-xl">
-        You may qualify for a policy payout.
-        </p>
         <p className="text-xl mt-8">
         We've sent this, as well as some other helpful information to the email you provided. A specialist will reach out and give you an opportunity to ask whatever questions you'd like and run through what might be next in the process. 
         </p>
