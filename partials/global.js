@@ -4,8 +4,8 @@ const Header = ({ handleLogoClick }) => {
   return (
     <div className="md:flex justify-between items-center w-full text-center md:text-left">
       <Image
-        src="/logo_full.svg"
-        width={100}
+        src="/wrf-logo.svg"
+        width={200}
         height={25}
         onClick={handleLogoClick}
       />
@@ -37,11 +37,11 @@ const Footer = () => {
     <div className="footer px-2">
       <div className="footer-block">
         <a href="#" className="footer-logo w-inline-block">
-          <img
-            src="https://uploads-ssl.webflow.com/5e5435c7173a85582beb1f7f/5e561fd324830b24ad0a0125_Worthright_Logo.png"
-            alt=""
-            className="logo-footer"
-          />
+            <Image
+              src="/wrf-logo.svg"
+              width={200}
+              height={25}
+            />
         </a>
         <div className="footer-link-parent">
           {/* <div className="footer-title">
