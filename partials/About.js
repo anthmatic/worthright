@@ -11,7 +11,7 @@ const About = () => {
       {/* <p className="text-xl mt-4">2 Avenue de Lafayette
 4th Floor
 Boston, MA 02111 | 
-Phone: <a href="tel:(877) 777-2918">(877) 777-2918</a></p> */}
+Phone: <a href="tel:(877) 466-5730">(877) 466-5730</a></p> */}
       </div>
   );
 };

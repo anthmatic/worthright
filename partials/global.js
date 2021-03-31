@@ -11,7 +11,7 @@ const Header = ({ handleLogoClick }) => {
       />
       <p className="text-sm">
         TALK TO A SPECIALIST - CALL{" "}
-        <a href="tel:(877) 777-2918">(877) 777-2918</a>
+        <a href="tel:(877) 466-5730">(877) 466-5730</a>
       </p>
     </div>
   );
