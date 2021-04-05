@@ -24,7 +24,6 @@ const Bars = ({ currentStep, setCurrentStep }) => {
       <div
         className="absolute top-0 left-0 hover:underline cursor-pointer text-xs"
         onClick={() => {
-          console.log("yo");
           setCurrentStep(currentStep - 1);
         }}
       >
