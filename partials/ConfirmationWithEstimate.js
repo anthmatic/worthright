@@ -21,7 +21,7 @@ const ConfirmationWithEstimate = ({ amount }) => {
     <>
       <div className="bg-wgray">
         <div className="container p-20 pb-32 text-center max-w-3xl ">
-          <Image src="/pinecone.png" height={291} width={251} />
+          <Image src="/icons/gold_check.svg" height={118} width={133} />
           <h2 className="text-5xl font-serif font-bold text-center mt-8 mb-8">
             Great News!
           </h2>
