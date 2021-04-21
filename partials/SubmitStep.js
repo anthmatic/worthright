@@ -116,23 +116,23 @@ const SubmitStep = () => {
       },
     };
     const URL = `https://api.hsforms.com/submissions/v3/integration/submit/7142976/f80ca816-881a-4cfc-9396-a2d156891252`;
-    // try {
-    //   await axios.post(URL, params);
-    // } catch (e) {
-    //   const errorData = e.response.data;
+    try {
+      await axios.post(URL, params);
+    } catch (e) {
+      const errorData = e.response.data;
 
-    //   if (
-    //     errorData.errors.some((error) => {
-    //       return error.errorType === "INVALID_EMAIL";
-    //     })
-    //   ) {
-    //     setErrorMessage("Please enter a valid email address");
-    //   } else {
-    //     setErrorMessage("There was an error processing this form");
-    //   }
-    //   setError(true);
-    //   return;
-    // }
+      if (
+        errorData.errors.some((error) => {
+          return error.errorType === "INVALID_EMAIL";
+        })
+      ) {
+        setErrorMessage("Please enter a valid email address");
+      } else {
+        setErrorMessage("There was an error processing this form");
+      }
+      setError(true);
+      return;
+    }
 
     if (policyValue > 0) {
       router.push("/estimate");
