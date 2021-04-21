@@ -18,7 +18,7 @@ const Flow = () => {
   return (
     <div className="">
       <Container cName="bg-wgray px-5 py-5">
-        <Header handleLogoClick={() => {console.log('click'); setCurrentStep(0)}} />
+        <Header handleLogoClick={() => {setCurrentStep(0)}} />
         <Steps currentStep={state.currentStep} setCurrentStep={setCurrentStep} />
       </Container>
       {

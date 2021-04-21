@@ -1,0 +1,51 @@
+
+<svg width="59px" height="77px" viewBox="0 0 59 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tool---8---Results" transform="translate(-701.000000, -1132.000000)">
+            <g id="Group" transform="translate(701.000000, 1132.000000)">
+                <g id="Group-59" transform="translate(0.000000, 36.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Clip-58"></g>
+                    <polygon id="Fill-57" fill="#0DACB2" mask="url(#mask-2)" points="-5 -5 35 -5 35 46 -5 46"></polygon>
+                </g>
+                <g id="Group-62" transform="translate(30.000000, 36.000000)">
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <g id="Clip-61"></g>
+                    <polygon id="Fill-60" fill="#029298" mask="url(#mask-4)" points="-5 -5 34 -5 34 46 -5 46"></polygon>
+                </g>
+                <g id="Group-65" transform="translate(6.000000, 19.000000)">
+                    <mask id="mask-6" fill="white">
+                        <use xlink:href="#path-5"></use>
+                    </mask>
+                    <g id="Clip-64"></g>
+                    <polygon id="Fill-63" fill="#16B76F" mask="url(#mask-6)" points="-5 -5 29 -5 29 40 -5 40"></polygon>
+                </g>
+                <g id="Group-68" transform="translate(30.000000, 19.000000)">
+                    <mask id="mask-8" fill="white">
+                        <use xlink:href="#path-7"></use>
+                    </mask>
+                    <g id="Clip-67"></g>
+                    <polygon id="Fill-66" fill="#109B5D" mask="url(#mask-8)" points="-5 -5 29 -5 29 40 -5 40"></polygon>
+                </g>
+                <g id="Group-71" transform="translate(17.000000, 0.000000)">
+                    <mask id="mask-10" fill="white">
+                        <use xlink:href="#path-9"></use>
+                    </mask>
+                    <g id="Clip-70"></g>
+                    <polygon id="Fill-69" fill="#FDC500" mask="url(#mask-10)" points="-5 -5 18 -5 18 32 -5 32"></polygon>
+                </g>
+                <g id="Group-74" transform="translate(29.000000, 0.000000)">
+                    <mask id="mask-12" fill="white">
+                        <use xlink:href="#path-11"></use>
+                    </mask>
+                    <g id="Clip-73"></g>
+                    <polygon id="Fill-72" fill="#D9A800" mask="url(#mask-12)" points="-5 -5 18 -5 18 32 -5 32"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
